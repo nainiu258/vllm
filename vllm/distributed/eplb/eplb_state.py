@@ -738,7 +738,7 @@ class EplbState:
             )
 
         # Map the physical expert load to global logical experts
-        global_expert_load_windows = []  # 在一个window内，负载的情况
+        global_expert_load_windows = []
         for eplb_model_state in self.model_states.values():
             expert_load_window = eplb_model_state.expert_load_window[
                 :, :, : self.num_valid_physical_experts
